@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>慈铭日间照料中心招聘</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#2563eb',
+                        secondary: '#f97316',
+                        neutral: '#f8fafc',
+                        dark: '#1e293b',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'system-ui', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    <style type="text/tailwindcss">
+        @layer utilities {
+            .content-auto {
+                content-visibility: auto;
+            }
+            .text-shadow {
+                text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            }
+            .card-hover {
+                @apply transition-all duration-300 hover:shadow-xl hover:-translate-y-1;
+            }
+            .btn-primary {
+                @apply bg-primary hover:bg-primary/90 text-white font-medium py-2 px-4 rounded-lg transition-all duration-300 shadow-md hover:shadow-lg transform hover:-translate-y-0.5;
+            }
+        }
+    </style>
+</head>
+<body class="bg-neutral font-sans text-dark">
+    <!-- 导航栏 -->
+    <nav id="navbar" class="fixed w-full bg-white/90 backdrop-blur-sm shadow-sm z-50 transition-all duration-300">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center">
+                    <div class="text-primary font-bold text-xl md:text-2xl">
+                        <i class="fa fa-heartbeat mr-2"></i>慈铭日间照料中心招聘
+                    </div>
+                </div>
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-center space-x-4">
+                        <a href="#home" class="text-dark hover:text-primary px-3 py-2 rounded-md text-sm font-medium transition-colors duration-200">首页</a>
+                        <a href="#jobs" class="text-dark hover:text-primary px-3 py-2 rounded-md text-sm font-medium transition-colors duration-200">招聘岗位</a>
+                        <a href="#benefits" class="text-dark hover:text-primary px-3 py-2 rounded-md text-sm font-medium transition-colors duration-200">福利待遇</a>
+                        <a href="#location" class="text-dark hover:text-primary px-3 py-2 rounded-md text-sm font-medium transition-colors duration-200">工作地点</a>
+                    </div>
+                </div>
+                <div class="md:hidden">
+                    <button id="menu-toggle" class="text-dark hover:text-primary">
+                        <i class="fa fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- 移动端菜单 -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white shadow-lg rounded-b-lg mx-4 mt-1 overflow-hidden">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="#home" class="block px-3 py-2 rounded-md text-base font-medium text-dark hover:bg-primary/10 hover:text-primary">首页</a>
+                <a href="#jobs" class="block px-3 py-2 rounded-md text-base font-medium text-dark hover:bg-primary/10 hover:text-primary">招聘岗位</a>
+                <a href="#benefits" class="block px-3 py-2 rounded-md text-base font-medium text-dark hover:bg-primary/10 hover:text-primary">福利待遇</a>
+                <a href="#location" class="block px-3 py-2 rounded-md text-base font-medium text-dark hover:bg-primary/10 hover:text-primary">工作地点</a>
+
+            </div>
+        </div>
+    </nav>
+
+    <!-- 英雄区域 -->
+    <section id="home" class="pt-24 pb-16 md:pt-32 md:pb-24 bg-gradient-to-br from-primary/5 to-white">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col lg:flex-row items-center">
+                <div class="w-full lg:w-1/2 mb-8 lg:mb-0">
+                    <h1 class="text-[clamp(2rem,5vw,3.5rem)] font-bold text-dark leading-tight mb-4">
+                        加入我们的<span class="text-primary">慈铭养老日间照料中心</span>团队
+                    </h1>
+                    <p class="text-lg md:text-xl text-gray-600 mb-8 leading-relaxed">
+                        慈铭养老中心致力于为长者提供优质的生活照料和医疗服务。我们诚邀有爱心、有责任感的您加入，共创美好未来。
+                    </p>
+                    <div class="flex flex-wrap gap-4">
+                        <a href="#jobs" class="btn-primary">
+                            <i class="fa fa-search mr-2"></i>浏览职位
+                        </a>
+                   
+                    </div>
+                </div>
+                <div class="w-full lg:w-1/2 relative">
+                    <div class="relative rounded-2xl overflow-hidden shadow-2xl">
+                        <img src="C:\Users\苑\Desktop\222.jpg" alt="慈铭养老中心环境" class="w-full h-auto rounded-2xl">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent flex items-end">
+                            <div class="p-6 text-white">
+                                <h3 class="text-xl font-bold mb-2">我们的环境</h3>
+                                <p class="text-white/90">舒适、温馨的居住空间，为长者提供优质生活</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="absolute -bottom-6 -left-6 w-32 h-32 bg-secondary/20 rounded-full -z-10 blur-xl"></div>
+                    <div class="absolute -top-6 -right-6 w-40 h-40 bg-primary/20 rounded-full -z-10 blur-xl"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 关于我们 -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-[clamp(1.5rem,3vw,2.5rem)] font-bold text-dark mb-4">关于我们</h2>
+                <div class="w-20 h-1 bg-primary mx-auto mb-6 rounded-full"></div>
+                <p class="text-gray-600 max-w-3xl mx-auto text-lg">慈铭养老日间照料中心成立于2025年，是一家集生活照料、医疗保健、文化娱乐、智慧养老为一体的综合性养老服务机构。</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-neutral rounded-xl p-6 shadow-md card-hover">
+                    <div class="w-14 h-14 bg-primary/10 rounded-full flex items-center justify-center mb-4">
+                        <i class="fa fa-hospital-o text-primary text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">专业医疗</h3>
+                    <p class="text-gray-600">我们拥有专业的医疗团队，为长者提供全方位的健康管理和医疗服务。</p>
+                </div>
+                <div class="bg-neutral rounded-xl p-6 shadow-md card-hover">
+                    <div class="w-14 h-14 bg-primary/10 rounded-full flex items-center justify-center mb-4">
+                        <i class="fa fa-heart text-primary text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">贴心照料</h3>
+                    <p class="text-gray-600">提供24小时生活照料服务，满足长者日常生活需求，让长者感受家的温暖。</p>
+                </div>
+                <div class="bg-neutral rounded-xl p-6 shadow-md card-hover">
+                    <div class="w-14 h-14 bg-primary/10 rounded-full flex items-center justify-center mb-4">
+                        <i class="fa fa-users text-primary text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">文化生活</h3>
+                    <p class="text-gray-600">丰富多彩的文化娱乐活动，让长者的晚年生活充满乐趣和活力。</p>
+                </div>
+            </div>
+
+            <div class="mt-12 grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                <div class="relative">
+                    <img src="C:\Users\苑\Desktop\111.jpg" alt="养老中心活动" class="w-full h-auto rounded-xl shadow-lg">
+                    <div class="absolute -bottom-4 -right-4 bg-white p-4 rounded-lg shadow-lg">
+                        <div class="flex items-center">
+                            <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mr-3">
+                                <i class="fa fa-smile-o text-primary text-xl"></i>
+                            </div>
+                 
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="text-2xl font-bold mb-4">我们的使命</h3>
+                    <p class="text-gray-600 mb-4">慈铭养老日间照料中心致力于为长者提供高质量的生活照料和医疗服务，让每一位长者都能享受幸福、健康、有尊严的晚年生活。</p>
+                    <p class="text-gray-600 mb-6">我们注重员工的培养和发展，为员工提供良好的工作环境和发展空间。加入我们，一起为长者的幸福生活贡献力量！</p>
+                    <div class="flex flex-wrap gap-4">
+                        <div class="flex items-center">
+                            <div class="w-8 h-8 bg-primary/10 rounded-full flex items-center justify-center mr-2">
+                                <i class="fa fa-check text-primary"></i>
+                            </div>
+                            <span>团队氛围和谐</span>
+                        </div>
+                        <div class="flex items-center">
+                            <div class="w-8 h-8 bg-primary/10 rounded-full flex items-center justify-center mr-2">
+                                <i class="fa fa-check text-primary"></i>
+                            </div>
+                            <span>专业培训提升</span>
+                        </div>
+                        <div class="flex items-center">
+                            <div class="w-8 h-8 bg-primary/10 rounded-full flex items-center justify-center mr-2">
+                                <i class="fa fa-check text-primary"></i>
+                            </div>
+                            <span>广阔发展空间</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 招聘岗位 -->
+    <section id="jobs" class="py-16 bg-neutral">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-[clamp(1.5rem,3vw,2.5rem)] font-bold text-dark mb-4">招聘岗位</h2>
+                <div class="w-20 h-1 bg-primary mx-auto mb-6 rounded-full"></div>
+                <p class="text-gray-600 max-w-3xl mx-auto text-lg">我们诚邀有爱心、有责任感的您加入我们的团队，共同为长者的健康生活努力。</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- 医生岗位 -->
+                <div class="bg-white rounded-xl overflow-hidden shadow-md card-hover">
+                    <div class="h-4 bg-primary"></div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-4">
+                            <h3 class="text-xl font-bold text-dark">医生</h3>
+                            <span class="bg-primary/10 text-primary px-3 py-1 rounded-full text-sm font-medium">5名</span>
+                        </div>
+                        <div class="mb-4">
+                            <div class="flex items-center text-gray-500 mb-2">
+                                <i class="fa fa-user-md mr-2"></i>
+                                <span>持有执业医师资格证，全科、内科、中医科</span>
+                            </div>
+                            <div class="flex items-center text-gray-500 mb-2">
+                                <i class="fa fa-stethoscope mr-2"></i>
+                                <span>有工作经验者优先</span>
+                            </div>
+                        </div>
+                        <div class="border-t pt-4 mt-4">
+                            <div class="flex justify-between items-center">
+                                <span class="text-gray-500">薪资面谈</span>
+                                                            </div>
+                       
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 护士岗位 -->
+                <div class="bg-white rounded-xl overflow-hidden shadow-md card-hover">
+                    <div class="h-4 bg-secondary"></div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-4">
+                            <h3 class="text-xl font-bold text-dark">护士</h3>
+                            <span class="bg-secondary/10 text-secondary px-3 py-1 rounded-full text-sm font-medium">5名</span>
+                        </div>
+                        <div class="mb-4">
+                            <div class="flex items-center text-gray-500 mb-2">
+                                <i class="fa fa-user-md mr-2"></i>
+                                <span>45岁以下，负责医疗护理工作</span>
+                            </div>
+                            <div class="flex items-center text-gray-500 mb-2">
+                                <i class="fa fa-stethoscope mr-2"></i>
+                                <span>指导护理员开展护理工作，会基础护理操作</span>
+                            </div>
+                            <div class="flex items-center text-gray-500">
+                                <i class="fa fa-ambulance mr-2"></i>
+                                <span>协助处理老人突发健康问题，与医疗机构对接</span>
+                            </div>
+                        </div>
+                        <div class="border-t pt-4 mt-4">
+                            <div class="flex justify-between items-center">
+                                <span class="text-gray-500">薪资面谈</span>
+                              
+                            </div>
+                        
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 护理岗位 -->
+                <div class="bg-white rounded-xl overflow-hidden shadow-md card-hover">
+                    <div class="h-4 bg-green-500"></div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-4">
+                            <h3 class="text-xl font-bold text-dark">护理</h3>
+                            <span class="bg-green-100 text-green-600 px-3 py-1 rounded-full text-sm font-medium">15名</span>
+                        </div>
+                        <div class="mb-4">
+                            <div class="flex items-center text-gray-500 mb-2">
+                                <i class="fa fa-user mr-2"></i>
+                                <span>45岁以下，负责老人日常生活照料</span>
+                            </div>
+                            <div class="flex items-center text-gray-500 mb-2">
+                                <i class="fa fa-home mr-2"></i>
+                                <span>上门照料、助浴服务</span>
+                            </div>
+                            <div class="flex items-center text-gray-500">
+                                <i class="fa fa-heartbeat mr-2"></i>
+                                <span>协助老人进行基础康复训练</span>
+                            </div>
+                        </div>
+                        <div class="border-t pt-4 mt-4">
+                            <div class="flex justify-between items-center">
+                                <span class="text-gray-500">薪资面谈</span>
+                                
+                            </div>
+                          
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 前台岗位 -->
+                <div class="bg-white rounded-xl overflow-hidden shadow-md card-hover">
+                    <div class="h-4 bg-purple-500"></div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-4">
+                            <h3 class="text-xl font-bold text-dark">前台</h3>
+                            <span class="bg-purple-100 text-purple-600 px-3 py-1 rounded-full text-sm font-medium">3名</span>
+                        </div>
+                        <div class="mb-4">
+                            <div class="flex items-center text-gray-500 mb-2">
+                                <i class="fa fa-phone mr-2"></i>
+                                <span>负责接待来访人员，接听电话</span>
+                            </div>
+                            <div class="flex items-center text-gray-500 mb-2">
+                                <i class="fa fa-comments-o mr-2"></i>
+                                <span>温柔善良、善于沟通、有亲和力</span>
+                            </div>
+                            <div class="flex items-center text-gray-500">
+                                <i class="fa fa-paperclip mr-2"></i>
+                                <span>负责文件整理和行政事务</span>
+                            </div>
+                        </div>
+                        <div class="border-t pt-4 mt-4">
+                            <div class="flex justify-between items-center">
+                                <span class="text-gray-500">薪资面谈</span>
+                                
+                            </div>
+                         
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 餐厅人员岗位 -->
+                <div class="bg-white rounded-xl overflow-hidden shadow-md card-hover">
+                    <div class="h-4 bg-yellow-500"></div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-4">
+                            <h3 class="text-xl font-bold text-dark">餐厅人员</h3>
+                            <span class="bg-yellow-100 text-yellow-600 px-3 py-1 rounded-full text-sm font-medium">5名</span>
+                        </div>
+                        <div class="mb-4">
+                            <div class="flex items-center text-gray-500 mb-2">
+                                <i class="fa fa-cutlery mr-2"></i>
+                                <span>负责老人膳食准备和餐厅服务</span>
+                            </div>
+                            <div class="flex items-center text-gray-500 mb-2">
+                                <i class="fa fa-birthday-cake mr-2"></i>
+                                <span>会西点或面点，有工作经验者优先</span>
+                            </div>
+                            <div class="flex items-center text-gray-500">
+                                <i class="fa fa-heart mr-2"></i>
+                                <span>有爱心，关注老人饮食健康</span>
+                            </div>
+                        </div>
+                        <div class="border-t pt-4 mt-4">
+                            <div class="flex justify-between items-center">
+                                <span class="text-gray-500">薪资面谈</span>
+                            
+                            </div>
+                        
+                        </div>
+                    </div>
+                </div>
+
+                      </div>
+        </div>
+    </section>
+
+    <!-- 福利待遇 -->
+    <section id="benefits" class="py-16 bg-white">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-[clamp(1.5rem,3vw,2.5rem)] font-bold text-dark mb-4">福利待遇</h2>
+                <div class="w-20 h-1 bg-primary mx-auto mb-6 rounded-full"></div>
+                <p class="text-gray-600 max-w-3xl mx-auto text-lg">我们提供具有竞争力的薪资和完善的福利体系，关注每一位员工的成长与发展。</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="bg-neutral rounded-xl p-6 shadow-sm card-hover">
+                    <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mb-4">
+                        <i class="fa fa-shield text-primary text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">五险</h3>
+                    <p class="text-gray-600">提供完善的社会保险，保障员工权益。</p>
+                </div>
+                <div class="bg-neutral rounded-xl p-6 shadow-sm card-hover">
+                    <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mb-4">
+                        <i class="fa fa-home text-primary text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">租房补贴</h3>
+                    <p class="text-gray-600">为员工提供租房补贴，减轻生活压力。</p>
+                </div>
+                <div class="bg-neutral rounded-xl p-6 shadow-sm card-hover">
+                    <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mb-4">
+                        <i class="fa fa-graduation-cap text-primary text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">学历补贴</h3>
+                    <p class="text-gray-600">提供学历补贴，鼓励员工自我提升。</p>
+                </div>
+                <div class="bg-neutral rounded-xl p-6 shadow-sm card-hover">
+                    <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mb-4">
+                        <i class="fa fa-cutlery text-primary text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">工作餐</h3>
+                    <p class="text-gray-600">提供工作餐，让员工享受健康饮食。</p>
+                </div>
+                <div class="bg-neutral rounded-xl p-6 shadow-sm card-hover">
+                    <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mb-4">
+                        <i class="fa fa-money text-primary text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">绩效奖金</h3>
+                    <p class="text-gray-600">根据工作表现发放绩效奖金，激励员工创造价值。</p>
+                </div>
+                <div class="bg-neutral rounded-xl p-6 shadow-sm card-hover">
+                    <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mb-4">
+                        <i class="fa fa-clock-o text-primary text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">工龄工资</h3>
+                    <p class="text-gray-600">逐年递增的工龄工资，体现对长期服务员工的认可。</p>
+                </div>
+                <div class="bg-neutral rounded-xl p-6 shadow-sm card-hover">
+                    <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mb-4">
+                        <i class="fa fa-calendar text-primary text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">带薪年假</h3>
+                    <p class="text-gray-600">根据工作年限享受带薪年假，让员工有时间休息和放松。</p>
+                </div>
+                <div class="bg-neutral rounded-xl p-6 shadow-sm card-hover">
+                    <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mb-4">
+                        <i class="fa fa-medkit text-primary text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">定期体检</h3>
+                    <p class="text-gray-600">为员工提供定期体检，关注员工身体健康。</p>
+                </div>
+            </div>
+
+            <div class="mt-12 bg-primary/5 rounded-2xl p-8">
+                <h3 class="text-2xl font-bold mb-6 text-center">薪资结构</h3>
+                <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
+                    <div class="bg-white rounded-lg p-5 shadow-sm">
+                        <h4 class="text-lg font-bold mb-2 text-primary">基本工资</h4>
+                        <p class="text-gray-600">根据岗位和个人能力确定的基础薪酬</p>
+                    </div>
+                    <div class="bg-white rounded-lg p-5 shadow-sm">
+                        <h4 class="text-lg font-bold mb-2 text-primary">岗位津贴</h4>
+                        <p class="text-gray-600">根据不同岗位特点给予的补贴</p>
+                    </div>
+                    <div class="bg-white rounded-lg p-5 shadow-sm">
+                        <h4 class="text-lg font-bold mb-2 text-primary">工龄工资</h4>
+                        <p class="text-gray-600">逐年递增，体现对长期服务的认可</p>
+                    </div>
+                    <div class="bg-white rounded-lg p-5 shadow-sm">
+                        <h4 class="text-lg font-bold mb-2 text-primary">绩效奖金</h4>
+                        <p class="text-gray-600">根据工作表现和业绩发放的奖励</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 工作地点 -->
+    <section id="location" class="py-16 bg-neutral">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-[clamp(1.5rem,3vw,2.5rem)] font-bold text-dark mb-4">工作地点</h2>
+                <div class="w-20 h-1 bg-primary mx-auto mb-6 rounded-full"></div>
+                <p class="text-gray-600 max-w-3xl mx-auto text-lg">我们的养老中心位于周口市繁华地段，交通便利，周边设施完善。</p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+                <div class="rounded-xl overflow-hidden shadow-lg h-[400px] relative">
+                    <img src="https://picsum.photos/id/1031/800/600" alt="周口城市风光" class="w-full h-full object-cover">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end">
+                        <div class="p-6 text-white">
+                            <h3 class="text-2xl font-bold mb-2">周口市</h3>
+                            <p class="text-white/90">宜居的城市环境，丰富的文化底蕴</p>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="bg-white rounded-xl p-6 shadow-md mb-6">
+                        <h3 class="text-xl font-bold mb-4 flex items-center">
+                            <i class="fa fa-map-marker text-primary mr-2"></i> 具体地址
+                        </h3>
+                        <p class="text-gray-600 mb-4">周口市川汇区中原文博城欢乐家园B区慈铭养老日间照料中心</p>
+                                                                  </div>
+       
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- 页脚 -->
+    <footer class="bg-dark text-white pt-12 pb-6">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4 flex items-center">
+                        <i class="fa fa-heartbeat mr-2"></i>慈铭养老日间照料中心
+                    </h3>
+                    <p class="text-gray-400 mb-4">致力于为长者提供优质的生活照料和医疗服务，让每一位长者都能享受幸福、健康、有尊严的晚年生活。</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors duration-200">
+                            <i class="fa fa-weibo"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors duration-200">
+                            <i class="fa fa-weixin"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors duration-200">
+                            <i class="fa fa-qq"></i>
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="text-lg font-bold mb-4">快速链接</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#home" class="text-gray-400 hover:text-white transition-colors duration-200">首页</a></li>
+                        <li><a href="#jobs" class="text-gray-400 hover:text-white transition-colors duration-200">招聘岗位</a></li>
+                        <li><a href="#benefits" class="text-gray-400 hover:text-white transition-colors duration-200">福利待遇</a></li>
+                        <li><a href="#location" class="text-gray-400 hover:text-white transition-colors duration-200">工作地点</a></li>
+                       
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-bold mb-4">联系我们</h3>
+                    <ul class="space-y-2">
+                        <li class="flex items-center">
+                            <i class="fa fa-map-marker w-5 text-gray-400"></i>
+                            <span class="ml-2 text-gray-400">周口市川汇区中原路中原文博城欢乐家园B区慈铭日间照料中心</span>
+                        </li>
+                                                                                   </ul>
+                </div>
+                                </div>
+            </div>
+            <div class="border-t border-gray-800 pt-6 mt-6 text-center text-gray-500 text-sm">
+                <p>© 2025 慈铭养老日间照料中心 版权所有 | 豫ICP备152854852号</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // 导航栏滚动效果
+        window.addEventListener('scroll', function() {
+            const navbar = document.getElementById('navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('shadow-md');
+                navbar.classList.remove('bg-white/90');
+                navbar.classList.add('bg-white');
+            } else {
+                navbar.classList.remove('shadow-md');
+                navbar.classList.add('bg-white/90');
+                navbar.classList.remove('bg-white');
+            }
+        });
+
+        // 移动端菜单切换
+        document.getElementById('menu-toggle').addEventListener('click', function() {
+            const mobileMenu = document.getElementById('mobile-menu');
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // 平滑滚动
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                
+                if (targetElement) {
+                    // 关闭移动菜单（如果打开）
+                    document.getElementById('mobile-menu').classList.add('hidden');
+                    
+                    // 滚动到目标位置
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        });
+    </script>
+</body>
+</html>
+    
